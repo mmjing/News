@@ -33,7 +33,7 @@ jobs:
     - name: Commit and push changes
       uses: github-actions-x/commit@v2.9
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.DAILY_TOKEN }}
         push-branch: 'master'
         commit-message: '✏️ Update papers automatically.'
         force-add: 'true'
@@ -44,4 +44,4 @@ jobs:
     - name: Create an issue to notify
       uses: JasonEtco/create-an-issue@v2
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.DAILY_TOKEN }}
